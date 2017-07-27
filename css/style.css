@@ -1,0 +1,293 @@
+/*************CSS**************/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Magra');
+
+#top{
+	z-index: 100;
+	width: 100%;
+	text-align: left;
+	background-color: #222;
+	position: fixed;
+	font-family: 'Magra', sans-serif;
+	height: 30px;
+}
+
+input{
+	background-color: transparent;
+	border: none;
+	font-weight: bold;
+	width: 70px;
+	margin-right: 20px;
+	color: #87D37C;
+}
+
+label{
+	padding: 10px;
+	color: #F9BF3B;
+}
+
+*{
+	padding:0;
+	margin: 0;
+}
+
+#logoimg{
+	padding: 10px 30px;
+	width: 20px;
+	float: left;
+}
+
+#content{
+	padding:5%;
+}
+
+span2{
+	color: #CF000F;
+}
+
+.nav-main{
+	top:21px;
+	position: fixed;
+	width: 100%; 
+	background-color: #F9BF3B;
+	height: 70px;
+	color: #000;
+	z-index: 100;
+}
+
+ul ul{
+	display: none;
+}
+
+ul li:hover ul{
+	display: block;
+}
+
+.nav-main .logo{
+	float: left;
+	height: 40px;
+	padding-top:25px;
+	padding-right: 2%;
+	font-size: 2em;
+	line-height: 20px;
+	font-weight: bolder;
+	font-family: 'Righteous', cursive;
+	font-family: 'Audiowide', cursive;
+}
+
+.nav-main > ul{
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+}
+
+.nav-main > ul > li{
+	float: left;
+}
+
+.nav-item{
+	display: inline-block;
+	padding: 10px 25px;
+	height: 15%;
+	line-height:50px;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Magra', sans-serif;
+}
+
+.nav-item:hover{
+	color: #446CB3;
+}
+
+.nav-content{
+	position: absolute;
+	top:auto;
+	overflow: hidden;
+	background-color: #222;
+	color: #fff;
+	/*max-height: 0;*/
+	font-size: 1.2em;
+	padding: 2px 2px 2px;
+}
+
+.nav-content a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav-content a:hover{
+	color: #446CB3;
+}
+
+.nav-sub{
+	padding-left:25px;
+	padding-right: 25px;
+	padding-bottom: 0px;
+}
+
+.nav-sub ul{
+	margin: 0;
+	padding:0;
+	list-style: none;
+	font-size: .7em;
+	font-family: 'Magra', sans-serif;
+}
+
+.nav-sub ul li a{
+	display: inline-block;
+	padding: 5px 5px;
+}
+
+ul li:hover .nav-item{
+	background-color: #222;
+	color: #fff;
+}
+
+/*.nav-item:focus ~ .nav-content{
+	max-height: 400px;
+}*/
+
+#bottom{
+	z-index: 50;
+	top:90px;
+	width: 100%;
+	position: fixed;
+	text-align: right;
+	background-color: #222;
+	font-family: 'Magra', sans-serif;
+} 
+
+#bottom >a{
+	color: #fff;
+	padding-right: 5%;
+	text-decoration: none;
+	font-size: 80%;
+}
+
+#slidesh{
+	top:110px;
+	position: relative;
+}
+
+#second{
+	position: relative;
+	padding-bottom: 4%;
+	top:110px;
+	height: auto;
+	background-color: #222;
+}
+
+#insp{
+	text-align: center;
+	width: 100%;
+}
+
+.one-third{
+	margin-left: 6%;
+	padding: 2%;
+	float: left;
+	text-align: center;
+}
+
+#two-col{
+	text-align: center;
+	margin-left: 5%;
+}
+
+#headsec{
+	text-align: center;
+	padding: 1%;
+	background-color: #F9BF3B;
+	font-weight: bold;
+	font-size: 150%;
+	font-family: 'Magra', sans-serif;
+}
+
+#marketdata{
+	text-align: center;
+}
+
+#headthree{
+	position: relative;
+	top:90px;
+	text-align: center;
+	padding: 2%;
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+	font-size: 150%;
+	font-family: 'Magra', sans-serif;
+}
+
+#third{
+	background-color: #F9BF3B;
+	height: 800px;
+}
+
+#charts{
+	text-align: center;
+	position: relative;
+	top:90px;
+	width: 43%;
+	float: left;
+	padding:3%;
+	height: 600px;
+}
+
+#chartsipo{
+	position: relative;
+	width: auto;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+	.nav-item{
+		color: #000;
+	}
+	.nav-content{
+		top:auto;
+	}
+	.nav-item{
+		display: inline-block;
+		padding: 0px 10px;
+		height: 5%;
+		line-height:50px;
+		color: #000;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	.nav-item{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+		#bottom >a{
+			font-size: 60%;
+		}
+		input{
+			font-size: 70%;
+		}
+
+		label{
+			font-size: 70%;
+		}
+}

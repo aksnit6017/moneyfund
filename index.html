@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MoneyFund.com</title>
+	<meta name="author" content="Akash Gaur">
+	<meta name="description" content="A new Startup Website">
+	<link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+	<link rel="stylesheet" href="ism/css/my-slider.css"/>
+	<script src="ism/js/ism-2.2.min.js"></script>
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/balloon.css">
+    <link rel="stylesheet" href="css/hover.css">
+
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+	<script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+
+    <script>
+var quote;
+$(document).ready(function() {
+stockPrice();
+setInterval(function(){
+stockPrice()
+}, 30000);
+});
+
+function stockPrice()
+{
+$.ajax({
+url: "http://finance.google.com/finance/info?client=ig&q=NSE:NIFTY,INDEXBOM:SENSEX",
+dataType: "jsonp",
+jsonp: "callback",
+jsonpCallback: "quote"
+});
+var i = 0;
+quote = function(data) {
+$.each(data, function( key, val ){
+$("#sensex"+i).val(data[i].l_cur)
+i++;
+});
+};
+}
+
+</script>
+
+</head>
+
+<body>
+		<link rel="stylesheet" href="css/LoadingStyle.css">
+<div id="fatherLoadd">
+   <div id="loadd">
+	  <div>G</div>
+	  <div>N</div>
+	  <div>I</div>
+	  <div>D</div>
+	  <div>A</div>
+	  <div>O</div>
+	  <div>L</div>
+	</div>
+</div>
+<script src="js/jquery.js">
+</script>
+<script>
+function fatherLoadd(){
+		$(function(){
+		$("#fatherLoadd").fadeOut("slow");
+		});
+	}
+	setTimeout(fatherLoadd,000);
+	
+</script>
+	
+	<!-- **************Frontpage************** -->
+		<div id="top">
+				<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="6"><label>Nifty</label><input type = "text" id = "sensex0">&nbsp;&nbsp;&nbsp;
+				<label>Sensex</label><input type = "text" id = "sensex1"></marquee>
+		</div>
+	
+		<nav class="nav-main">
+			<div id="logoimg">
+				<image src="img/logo2.png" width="40px">
+				</image>
+			</div>
+			<div class="logo fadeIn animated">
+				<a href="index.html" style="text-decoration: none; color: #000;" ><span>Money</span><span2>Fund</span2></a>
+			</div>
+			<ul>
+				<li>
+					<a href="#" class="nav-item bounceInDown animated">Markets</a>
+					<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="markets-overview.html">Overview</a></li>
+								<hr>
+								<li><a href="markets-equity.html">Equity</a></li>
+								<hr>
+								<li><a href="markets-derivatives.html">Derivatives</a></li>
+								<hr>
+								<li><a href="markets-commodities.html">Commodities</a></li>
+								<hr>
+								<li><a href="markets-currency.html">Currency</a></li>
+								<hr>
+								<li><a href="markets-mutualfunds.html">Mutual Funds</a></li>
+								<hr>
+								<li><a href="markets-ipos.html">IPO's</a></li>
+								<hr><br>
+					</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">Reserch</a>
+					<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="research-overview.html">Overview</a></li>
+								<hr>
+								<li><a href="research-companyreports.html">Company Reports</a></li>
+								<hr>
+								<li><a href="research-sectorreports.html">Sector Reports</a></li>
+								<hr>
+								<li><a href="research-thematicreports.html">Thematic Reports</a></li>
+								<hr>
+								<li><a href="research-marketanalysisreport.html">Market Analysis Report</a></li>
+								<hr><br>
+					</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">advice</a></li>
+				<li><a href="#" class="nav-item bounceInDown animated">technology</a>
+					<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="technology-overview.html">Overview</a></li>
+								<hr>
+								<li><a href="technology-mobileandtablet.html">Mobile and Tablet</a></li>
+								<hr>
+								<li><a href="technology-smartwatch.html">Smartwatch</a></li>
+								<hr>
+								<li><a href="technology-desktop.html">Desktop</a></li>
+								<hr>
+								<li><a href="technology-web.html">Web</a></li>
+								<hr>
+								<li><a href="technology-clientportal.html">Client Portal</a></li>
+								<hr>
+								<li><a href="technology-portfolio.html">Portfolio Reconstructing</a></li>
+								<hr><br>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">products</a>
+					<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="products-overview.html">Overview</a></li>
+								<hr>
+								<li><a href="products-equity.html">Equity</a></li>
+								<hr>
+								<li><a href="products-derivatives.html">Derivatives</a></li>
+								<hr>
+								<li><a href="products-commodities.html">Commodities</a></li>
+								<hr>
+								<li><a href="products-currency.html">Currency</a></li>
+								<hr><br>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">learn</a>
+						<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="learn-new.html">New to Marketers</a></li>
+								<hr>
+								<li><a href="learn-experienced.html">Experienced Traders</a></li>
+								<hr>
+								<li><a href="learn-educational.html">Educational Videos</a></li>
+								<hr><br>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">why us?</a></li>
+			</ul>
+		</nav>
+
+		<div id="bottom">
+			<a href="#">Contact Us</a>
+			<a href="" >Get Help</a>
+		</div>
+
+	
+	<!-- ************ Slide**************** -->
+	<div id="slidesh">
+			<div class="ism-slider" data-transition_type="fade" data-play_type="loop" id="my-slider">
+  				<ol>
+    				<li>
+    				  <img src="ism/image/slides/_u/1495047870301_344997.jpg">
+    				  <div class="ism-caption ism-caption-0">My slide caption text</div>
+    				</li>
+    				<li>
+    				  <img src="ism/image/slides/_u/1495047867170_825925.jpg">
+    				  <div class="ism-caption ism-caption-0">My slide caption text</div>
+    				</li>
+    				<li>
+    				  <img src="ism/image/slides/_u/1495047861812_874368.jpg">
+    				  <div class="ism-caption ism-caption-0">My slide caption text</div>
+    				</li>
+  			</ol>
+		</div>
+
+	</div>
+	<!-- ************ Slide**************** -->
+
+
+	<!--**************END Frontpage************ -->
+
+	<!-- *************** 2nd DIV ******* -->
+		<div id="second">
+			
+			<!-- Start TC2000 widget -->
+				<iframe width="100%" noresize="noresize" scrolling="no" height="40" frameborder="0" padding="5" src="https://widgets.tc2000.com/WidgetServer.ashx?id=53778"></iframe>
+			<!-- END TC2000 Widget -->
+
+			<div id="twocol">
+				<div id="headsec">Market at your Fingertips</div>
+				<div class="one-third wow bounceInLeft animated">
+					<iframe frameborder="0" src="http://www.indianotes.com/widgets/news-reports/index.php?w=270&h=350" width="270" height="350"></iframe>
+				</div>
+				<div class="one-third wow bounceInUp animated">
+					<iframe frameborder="0" src="http://www.indianotes.com/widgets/Top-Gainers-Losers/index.php?type=gainers-losers&w=270&h=350" width="270" height="350" scrolling="no"></iframe>
+				</div>
+				<div class="one-third wow bounceInRight animated">
+					<iframe frameborder="0" src="http://www.indianotes.com/widgets/currency-reports/index.php?w=270&h=350" width="270" height="350"></iframe>
+				</div>
+				<div class="one-third wow bounceInLeft animated">
+					<iframe frameborder="0" src="http://www.indianotes.com/widgets/currency-prices/index.php?type=all-currency-prices&w=270&h=350" width="270" height="350"></iframe>
+				</div>
+				<div class="one-third wow bounceInUp animated">
+					<iframe frameborder="0" src="http://www.indianotes.com/widgets/world-indices/index.php?type=all-world-indices&w=270&h=350" width="270" height="350" scrolling="no"></iframe>
+				</div>
+				<div class="one-third wow bounceInRight animated">
+					<iframe frameborder="0" src="http://www.indianotes.com/widgets/sensex-nifty-charts/index.php?type=charts&w=270&h=350" width="270" height="350" scrolling="no"></iframe>
+				</div>
+			</div>
+			<div id="marketdata">
+				<iframe frameborder="0" src="http://www.indianotes.com/widgets/indices-ticker/index.php?type=indices-ticker&w=900" width="900" height="100" scrolling="no"></iframe>
+			</div>
+			
+		</div>
+
+
+	<!--********************************** -->
+
+	<div id="third">
+		<div id="headthree" class="wow fadeInDown animated">
+				Charts at your fingertips
+		</div>
+		
+		<div id="charts">
+			<!-- TradingView Widget BEGIN -->
+			<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+			<script type="text/javascript">
+			new TradingView.widget({
+  				"width": 400,
+  				"height": 500,
+  				"symbol": "NSE:BANKNIFTY",
+  				"interval": "D",
+  				"timezone": "Etc/UTC",
+  				"theme": "Black",
+  				"style": "9",
+  				"locale": "en",
+  				"toolbar_bg": "rgba(0, 0, 0, 1)",
+  				"enable_publishing": false,
+  				"allow_symbol_change": true,
+  				"show_popup_button": true,
+  				"popup_width": "1000",
+  				"popup_height": "650"
+				});
+			</script>
+			<!-- TradingView Widget END -->
+		</div>
+
+		<div id="charts">
+			<!-- TradingView Widget BEGIN -->
+			<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+			<script type="text/javascript">
+			new TradingView.widget({
+  				"width": 400,
+  				"height": 500,
+  				"symbol": "FX_IDC:USDINR",
+  				"interval": "D",
+  				"timezone": "Asia/Kolkata",
+  				"theme": "Black",
+  				"style": "9",
+  				"locale": "en",
+  				"toolbar_bg": "rgba(0, 0, 0, 1)",
+  				"enable_publishing": false,
+  				"allow_symbol_change": true,
+  				"show_popup_button": true,
+  				"popup_width": "1000",
+  				"popup_height": "650"
+				});
+			</script>
+			<!-- TradingView Widget END -->
+
+		</div>
+
+	</div>
+</body>
+</html>

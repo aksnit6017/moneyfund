@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MoneyFund.com</title>
+	<meta name="author" content="Akash Gaur">
+	<meta name="description" content="A new Startup Website">
+	<link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+	<link rel="stylesheet" href="ism/css/my-slider.css"/>
+	<script src="ism/js/ism-2.2.min.js"></script>
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/balloon.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/breadcrumb.css">
+
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+	<script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+
+    <script>
+var quote;
+$(document).ready(function() {
+stockPrice();
+setInterval(function(){
+stockPrice()
+}, 30000);
+});
+
+function stockPrice()
+{
+$.ajax({
+url: "http://finance.google.com/finance/info?client=ig&q=NSE:NIFTY,INDEXBOM:SENSEX",
+dataType: "jsonp",
+jsonp: "callback",
+jsonpCallback: "quote"
+});
+var i = 0;
+quote = function(data) {
+$.each(data, function( key, val ){
+$("#sensex"+i).val(data[i].l_cur)
+i++;
+});
+};
+}
+
+</script>
+
+</head>
+
+<body>
+
+	<!-- **************Frontpage************** -->
+		<div id="top">
+				<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="6"><label>Nifty</label><input type = "text" id = "sensex0">&nbsp;&nbsp;&nbsp;
+				<label>Sensex</label><input type = "text" id = "sensex1"></marquee>
+		</div>
+	
+		<nav class="nav-main">
+			<div id="logoimg">
+				<image src="img/logo2.png" width="40px">
+				</image>
+			</div>
+			<div class="logo fadeIn animated">
+				<a href="index.html" style="text-decoration: none; color: #000;" ><span>Money</span><span2>Fund</span2></a>
+			</div>
+			<ul>
+				<li>
+					<a href="#" class="nav-item bounceInDown animated">Markets</a>
+					<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="markets-overview.html">Overview</a></li>
+								<hr>
+								<li><a href="markets-equity.html">Equity</a></li>
+								<hr>
+								<li><a href="markets-derivatives.html">Derivatives</a></li>
+								<hr>
+								<li><a href="markets-commodities.html">Commodities</a></li>
+								<hr>
+								<li><a href="markets-currency.html">Currency</a></li>
+								<hr>
+								<li><a href="markets-mutualfunds.html">Mutual Funds</a></li>
+								<hr>
+								<li><a href="markets-ipos.html">IPO's</a></li>
+								<hr><br>
+					</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">Reserch</a>
+					<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="research-overview.html">Overview</a></li>
+								<hr>
+								<li><a href="research-companyreports.html">Company Reports</a></li>
+								<hr>
+								<li><a href="research-sectorreports.html">Sector Reports</a></li>
+								<hr>
+								<li><a href="research-thematicreports.html">Thematic Reports</a></li>
+								<hr>
+								<li><a href="research-marketanalysisreport.html">Market Analysis Report</a></li>
+								<hr><br>
+					</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">advice</a></li>
+				<li><a href="#" class="nav-item bounceInDown animated">technology</a>
+					<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="technology-overview.html">Overview</a></li>
+								<hr>
+								<li><a href="technology-mobileandtablet.html">Mobile and Tablet</a></li>
+								<hr>
+								<li><a href="technology-smartwatch.html">Smartwatch</a></li>
+								<hr>
+								<li><a href="technology-desktop.html">Desktop</a></li>
+								<hr>
+								<li><a href="technology-web.html">Web</a></li>
+								<hr>
+								<li><a href="technology-clientportal.html">Client Portal</a></li>
+								<hr>
+								<li><a href="technology-portfolio.html">Portfolio Reconstructing</a></li>
+								<hr><br>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">products</a>
+					<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="products-overview.html">Overview</a></li>
+								<hr>
+								<li><a href="products-equity.html">Equity</a></li>
+								<hr>
+								<li><a href="products-derivatives.html">Derivatives</a></li>
+								<hr>
+								<li><a href="products-commodities.html">Commodities</a></li>
+								<hr>
+								<li><a href="products-currency.html">Currency</a></li>
+								<hr><br>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">learn</a>
+						<div class="nav-content">
+						<div class="nav-sub">
+							<ul>
+								<li><a href="learn-new.html">New to Marketers</a></li>
+								<hr>
+								<li><a href="learn-experienced.html">Experienced Traders</a></li>
+								<hr>
+								<li><a href="learn-educational.html">Educational Videos</a></li>
+								<hr><br>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="#" class="nav-item bounceInDown animated">why us?</a></li>
+			</ul>
+		</nav>
+
+		<div id="bottom">
+			<a href="#">Contact Us</a>
+			<a href="" >Get Help</a>
+		</div>
+	
+	<div id="brdc">
+		<ol class="breadcrumb">
+        	<li><a href="index.html"><span>Home</span></a></li>
+        	<li class="active"><span>Products </span></li>
+        	<li class="active"><span>Derivatives </span></li>
+    	</ol>
+	</div>
+
+</body>
+</html>
